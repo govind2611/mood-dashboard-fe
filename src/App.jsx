@@ -1,6 +1,7 @@
-import  { useState } from "react";
+import { useState } from "react";
 import axios from "axios";
-import MoodDisplay from "./components/MoodDisplay";
+
+import MoodDisplay from "./components/moodDisplay";
 
 const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
 
@@ -30,7 +31,9 @@ function App() {
     <div
       className="min-h-screen w-full flex flex-col items-center pt-20 transition-all duration-1000 px-4"
       style={{
-        backgroundColor: mood ? `${mood.color}11` : "#0f172a",
+        backgroundColor: mood
+          ? `linear-gradient(180deg, ${mood.color}22, #0f172a)`
+          : "#0f172a",
         color: "#ffffff",
       }}
     >
